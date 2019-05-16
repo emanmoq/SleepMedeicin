@@ -542,7 +542,29 @@ font-size:28px;
 .appDate{
     padding:20px;
 }
-.appDate:placeholder-shown{
-    color:white;
-}
 
+.appDate {
+    background:#fff url("../img/date.png")  97% 50% no-repeat ;
+  }
+  .appDate::-webkit-inner-spin-button {
+    display: none;
+  }
+  .appDate::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  input::-webkit-datetime-edit-day-field,
+  input::-webkit-datetime-edit-month-field,
+  input::-webkit-datetime-edit-year-field
+
+  {
+      color: white;
+      outline: none;
+      background-color: transparent;
+  }
+  
+  /* custom styles */
+  .styled-select select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
