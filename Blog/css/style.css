@@ -1,0 +1,64 @@
+  <div class="contactForm">
+                        <div class="SectionTitle">
+                            <h4>
+                                HAVE ANY QUESTION ?
+                            </h4>
+                            <span>We Ready To Talk With You Any Time</span>
+                            <div class="underSection">
+                                <hr><i class="fas fa-pencil-ruler"></i></div>
+
+                        </div>
+                        <form>
+                            <textarea class="formControl" placeholder="message here .." cols="50"> </textarea>
+                            <input type="name" placeholder="Subject" class="formControl contactformControl">
+                            <input type="email" placeholder=" Email Address" class=" formControl contactformControl ">
+                            <input type="number " placeholder="Number" class=" formControl  contactformControl">
+
+                        </form>
+                        <button class="btn btn-primary sendComment ">SEND MESSAGE</button>
+
+
+                    </div>
+
+
+**************************
+css
+.contactForm{
+    text-align: center;
+    width:100%;
+    margin-top:111px
+
+}
+.contactForm form{
+    margin-top:55px;
+    margin-bottom:40px;
+
+}
+.contactForm textarea{
+    width:100%;
+    resize:none;
+}
+.sendComment{
+    color:white;
+    background-color: #00bff3;
+    border:0;
+    text-align: center;
+    padding:15px 35px !important;
+}
+.contactForm .formControl{
+    background-color: #fbfbfb;
+    border:0;
+    padding:15px;
+}
+.contactForm .formControl::placeholder{
+    padding-left:30px;
+    font-size:14px;
+    color:#c5c5c5;
+    font-family: "Sansation_Regular";
+
+
+}
+.contactForm .formControl.contactformControl{
+    width:33%;
+
+}

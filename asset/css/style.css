@@ -9,6 +9,12 @@
     src: url("../Fonts/sansation/Sansation_Regular.ttf");
 
 }
+@font-face{
+    font-family: "Lato-Regular";
+    src: url("../Fonts/Lato2OFL/Lato-Regular.ttf");
+
+}
+
 
 
 body{
@@ -79,14 +85,21 @@ transition: all 1s;
 .header-cont{
     padding-top:10px;
 }
-.navbar{
+.blackNav{
     width:100%;
-    background-color: black;
     position: absolute;
     top:50%;
+    left:0;
+    
+}
+.navbar{
+    background-color: black;
     border-radius: 0;
-    padding:30px 0;
+    padding:25px 0;
     z-index: 1;
+    transform: 1s all;
+    width:100%;
+
     
 }
 .logo{
@@ -100,7 +113,7 @@ transition: all 1s;
     transition-duration: 2s;
 }
 
-.nav-link{
+.navbar .nav-link{
     color:white;
     font-size:18px;
 padding:10px 25px  !important;
@@ -112,7 +125,7 @@ padding:10px 25px  !important;
 .collapse{
     display: inline-block;
 }
-.nav-link:before{
+.navbar .nav-link:before{
     content: "";
 position: absolute;
 width: 0;
@@ -121,7 +134,7 @@ left: 24%;
 border:1px solid transparent;
 transition: all .6s;
 }
-.nav-link:after{
+.navbar.nav-link:after{
     content: "";
 position: absolute;
 width: 0;
@@ -130,19 +143,19 @@ right: 24%;
 border:1px solid transparent;
 transition: all .6s;
 }
-.nav-link:hover:before{
+.navbar .nav-link:hover:before,.nav-link.activeLink:before{
+    width:55%;
+    transition: all .6s;
+    border:1px solid #00bff3;
+}
+
+.navbar .nav-link:hover:after,.nav-link:hover:before,.nav-link.activeLink:before{
     width:55%;
     transition: all .6s;
     border:1px solid #00bff3;
 
 }
-.nav-link:hover:after{
-    width:55%;
-    transition: all .6s;
-    border:1px solid #00bff3;
-
-}
-.nav-link:hover{
+.navbar .nav-link:hover{
 background-color: transparent !important;
 color:white !important;
 }
@@ -158,6 +171,7 @@ color:white !important;
 .heroSec{
     width:100%;
     height:640px;
+    padding-top:212px;
     background-image:url("../img/hero.png");
     background-repeat: no-repeat;
 background-size:cover;
@@ -168,27 +182,47 @@ background-position: center;
 .heroCont{
     color:black;
 
-
 }
 .heroCont h1{
     font-size: 36px;
     font-weight: bold;
-    display: inline-block;
     font-family: "Sansation_Bold";
+    display:inline-block;
 
 
 }
 .herologo{
     width:50px;
     height:70px;
-    display: inline-block;
+display: inline-block;
     margin-right:40px;
+}
+.scrollNav{
+    top:0 !important;
+    z-index: 999999;
+    animation-duration: 1s;
+    background: rgb(255, 255, 255) !important;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 7px 3px;
+    transition: 1s all;
 
 }
+.scrollNav.navbar{
+    padding:10px 0;
+}
+.scrollNav .nav-link{
+color:black;   
+}    
+.scrollNav .nav-link:hover{
+    color:black !important;
+}
+
 .heroCont span{
     font-size:18px;
     display:block;
     margin-top:10px;
+    font-family: "Lato-Regular";
+
 
 }
 .herobtn{
@@ -208,8 +242,9 @@ font-family: "Sansation_Bold";
 .herobtn .learnMore:hover{
     background-color: #59bb89;
 }
-.hero .purchase{
+.herobtn .purchase{
     background-color: #00bff3;
+    padding:15px 33px !important;
 }
 .paddingSec{
     padding-top:125px;
@@ -259,7 +294,14 @@ border-bottom-left-radius: 40%;
 .ServicCont{
     width:100%;
     margin-top:50px;
+    transition: 1s all;
+
 }
+.ServicCont:hover{
+    box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
+transition: 1s all;
+}
+
 .ServiceImg{
     width:40%;
     float:left;
@@ -339,7 +381,11 @@ overflow: hidden;}
     float:left;
     margin-top:20px;
     padding-top:35px;
+    transition: all 1s;
 
+}
+.provider:hover{
+    box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
 }
 .ProvideImg{
     width:90px;
@@ -359,26 +405,39 @@ overflow: hidden;}
 
 .workingHours{
     width:50%;
-    float:left;
+    padding-top:80px;
+    padding-bottom:80px;
+    padding-left:100px;
     background-color: #00bff3;
-    padding-top:80px;
-    padding-bottom:80px;
-    height:100%;
-}
-.Appointment{
-    float:right;
-   width:50%;
-    background-color: #50cb8c;
-    padding-top:80px;
-    padding-bottom:80px;
-    height:100%;
+    color:white !important;
+    height:435px;
+    padding-right:100px;
 
+
+
+}
+.Appoinment{
+    width:50%;
+    padding-top:80px;
+    padding-bottom:80px;
+    padding-right:100px;
+    background-color: #50cb8c;
+    color:white;
+    padding-left:140px;
+    height: 100%;
+    height:435px;
+
+}
+.Appoinment .workHoursCont span{
+    font-size:15px; 
 }
 .workingHoursSec{
     color:white;
-    width:100%;
-    height: 432px;
- 
+width:100%;
+height:435px;
+}
+.workHoursCont{
+    margin-bottom: 40px;
 }
 .workHoursCont h3{
     font-size:22px;
@@ -391,18 +450,20 @@ overflow: hidden;}
 
 }
 
-.whorkHoursCont ul li{
-    list-style-type: none;
-    margin-top:35px;
 
-}
 .AppointBtn{
     background-color: white;
-
 }
 .DoctorsStuff{
     width:100%;
     padding-bottom:200px;
+}
+.DoctorBox{
+    transition: all 1s;
+
+}
+.DoctorBox:hover{
+    box-shadow: rgba(0,0,0,.2)0 0 6px 2px;
 }
 .doctorImg{
     width:100%;
@@ -478,6 +539,7 @@ overflow: hidden;}
     width:100%;
     text-align: left;
     margin-top:40px;
+    padding:10px;
 }
 .DoctorSlider .owl-nav {
     
@@ -486,6 +548,10 @@ overflow: hidden;}
     bottom: -85px;
     left: 48%;
 }
+.DoctorSlider .owl-stage-outer{
+padding:10px 5px;    
+}
+
 .DoctorSlider .owl-nav button{
     background-color: transparent;
     border: 0;
@@ -508,6 +574,7 @@ overflow: hidden;}
 }
 .makeAppoint{
     background-color: #04baeb;
+    padding-bottom:115px;
 }
 .makeAppoint .SectionTitle span,.makeAppoint .SectionTitle h4{
     color:white;
@@ -527,14 +594,14 @@ font-size:28px;
     height:45px;
 }
 .formAppoint .formControl::placeholder{
-    color:#b4eaf9;
+    color:white;
     padding:20px 25px;
     font-size:14px;
     font-family: "Sansation_Regular";
 }
 .formAppoint .formControl.phoneEmail{
     width: 48%;
-    margin-right: 18px;
+    margin-right: 17px;
 }
 .formControl.phoneEmail.lastinput{
     margin-right: 0;
@@ -544,6 +611,7 @@ font-size:28px;
 }
 
 .appDate {
+    background:transparent;
     background:#fff url("../img/date.png")  97% 50% no-repeat ;
   }
   .appDate::-webkit-inner-spin-button {
@@ -563,8 +631,550 @@ font-size:28px;
   }
   
   /* custom styles */
-  .styled-select select {
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+select.Gender{
+    -moz-appearance: window;
+    -webkit-appearance: none;
+
+        background:#fff url("../img/arrow.png")  97% 50% no-repeat ;
+    
+            color: white !important;
+            padding-left:20px;
+    
+ 
+}
+.Gender option:not(:first-of-type) {
+    color: black;
+  }
+  .workingHours ul{
+      padding:0;
+      margin:0;
+  }
+.workingHours ul li{
+    list-style-type:none;
+font-size:13px;
+margin-bottom: 36px;
+}
+  
+  @-moz-document url-prefix() {
+    .wrapper {
+         background: #f5f5f5 url("/images/arrow_down.png") right center no-repeat;
+         padding-right: 20px;
+      }
+    }
+    textarea.formControl{
+        color:white;
+        padding-left:20px;
+        padding-top:20px;
+        resize: none;
+        height:125px !important;
+       
+    }
+    .appointsendBtn{
+        font-family: "Sansation_Bold";
+        margin-top:30px;
+
+        background-color:black;
+        color:white;
+        font-size:12px;
+        padding:17px 40px !important;
+    }
+    .makeAppoint .container{
+        position: relative;
+    }
+    .OurGallery{
+        position: absolute;
+        width:50%;
+        right:0;
+        top:0;
+        z-index: 0;
+    }
+    .GalleryImg{
+        width:25%;
+        float:left;
+        margin:20px;
+        height:147px;
+        transition: 1s all;
+
+    }
+    .GalleryImg:hover{
+        transform: scale(1.1);
+        transition: 1s all;
+    }
+    .galleryText:hover{
+        transform: none
+    }
+     .galleryText{
+background-color: white;
+text-align: center;
+position: relative;
+    }
+    .galleryText h4{
+        font-weight: bold;
+        font-size:30px;
+        line-height: 50px;
+
+    }
+     .OurGallery::before{
+    
+         content: "";
+         position: absolute;
+         width: 75%;
+         height: 75%;
+         background-color: white;
+         z-index: -1;
+         left: 10%;
+         top: 10%;
+     }
+
+     .col-lg-4 > div{
+        margin-bottom:50px;
+    }
+    .title{
+        color:#00bff3;
+        font-size:20px;
+        font-family: "Montserrat-Bold"
+    }
+    .media{
+        border-bottom:1px dotted #979797;
+        padding:20px 0;
+    }
+    .media:last-child{
+        border-bottom:0
+    }
+    .media img{
+        width:60px;
+        border-radius: 4px;
+        height: 60px;
+        object-fit: cover
+    }
+    .media-body h5{
+        color:#444444;
+        font-family: "Sansation_Bold";
+        font-size: 15px;
+    }
+    .media-body span{
+        color:#0085d3;
+        font-size:13px;
+        font-family: "Sansation_Regular"
+    }
+    ul.flex-column a{
+        color:#444444;
+        font-family: "Sansation_Regular";
+        font-size: 13px;
+    }
+    ul.flex-column a i{
+        padding-right:15px;
+        font-size: 9px;
+    }
+    .flex-column .nav-link .line{
+        background: #e8e8e8;
+        width:100%;
+        margin:9px;
+        height:2px;
+        flex:5
+    }
+    .BlogSec{
+        padding-bottom:75px;
+    }
+    #Blogs{
+        padding-bottom:110px;
+
+    }
+    
+    #Blogs .col-md-6{
+        margin-bottom: 70px;
+    }
+    .postedBy h4{
+        font-family: "Sansation_Regular";
+        font-size: 14px;
+        color:#888888
+    }
+    .postedBy span{
+        color: #00bff3;
+        font-family: "Sansation_Regular";
+    }
+    span.number{
+        font-size: 12px;
+    }
+    .card-title{
+        color:#444444;
+        font-size: 17px;
+        font-family: "Sansation_Bold";
+        text-transform: uppercase
+    }
+    .card{
+        border:0;
+        transition: all 1s;
+    }
+    .card:hover{
+        box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
+        transition: all 1s;
+    }
+    .card-body{
+        padding:0;
+        padding-top:30px;
+    }
+    .card-text{
+        color:#666666;
+        font-family: "Sansation_Regular";
+        font-size: 14px;
+    }
+    .card-img-top{
+        border-radius: 4px;
+    }
+    .card-top{
+        position: relative;
+    }
+    .card-top img{
+        height:40%;
+    }
+    .card-top span{
+        background:#00bff3;
+        padding:10px 15px;
+        font-family: "Sansation_Regular";
+        font-size: 13px;
+        font-weight: normal;
+        position: absolute;
+        bottom:20px;
+        right:20px;
+        border-radius: 2px;
+    }
+    .card-top:after{
+        content:'';
+        position: absolute;
+        bottom:0;
+        right:50px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 7px 7px 7px;
+        border-color: transparent transparent #ffffff transparent;
+    
+    }
+    .blogsRow{
+        margin-top:50px;
+    }
+    .blogsRow .card{
+text-align: left;
+    }
+    .ViewPost{
+        background-color: #00bff3;
+        margin:0 auto;
+        margin-top:70px;
+        padding:16px 17px !important;
+        border:0;
+    }
+    .GuestSec{
+        background-color: #f7f7f7;
+        padding-bottom:102px;
+    }
+    .GuestImg{
+        width:80px;
+        height:80px;
+        border-radius: 50%;
+        margin:0 auto;
+        margin-bottom:33px;
+
+    }.GuestCarusel{
+        margin-top:65px;
+    }
+    .gusetComment{
+        font-size: 16px;
+    font-weight: 500;
+        }
+        .GuestItem .userNAme{
+            color:#00bff3;
+            display: block;
+            margin-top:31px;
+            font-weight: 900;
+            font-size:16px;
+            
+        }
+        .social{
+color:#c5c5c5;
+font-size:13px;
+        }
+        .GuestSec .owl-nav{ display:block !important;
+            position: absolute;
+            top:45%;
+          
+        }.GuestCarusel{
+position: relative;
+        }
+        .GuestSec .owl-nav button{
+            background-color:transparent;
+            position: absolute;
+            border:0;
+            padding:15px 17px;
+            color:white;
+            background-color: #00bff3;
+            border-radius: 50%;
+            font-size:14px;
+            text-align: center;
+        }
+        .GuestSec .owl-nav button:hover{
+            background-color:black;
+            color:white;
+            box-shadow:rgba(0,0,0,.3) 0 0 6px 1px;
+        }
+        .GuestSec .owl-nav button.owl-next{
+            right:0;
+        }
+        .contactSec{
+            background-color:#1a1a1a;
+            padding-top:80px;
+        }
+        .contactSec h4{
+            text-transform:uppercase;
+            font-weight: bold;
+            text-align: left;
+   color:white;
+            font-size:25px;
+        }
+        .contactSec span{
+            font-size:15px;
+            color:white;
+        font-family: "Sansation_Regular";
+        }
+        .help{
+            width:60%;
+        } 
+#map{
+    margin-top:75px;
+    height:420px;
+    width:100%;
+}
+.footer{
+    background-color: #19191e;
+}
+.footerLogo{
+    width:50%;
+    margin-bottom:35px;
+}
+.footer{
+    color:white;
+    padding-bottom:120px;
+}
+.footer span{
+    font-size:14px;
+    font-family: "Sansation_Regular";
+
+}
+.footer h4{
+    font-weight:700;
+    font-size:20px;
+}
+.footer .socialIcons{
+    float: none;
+    margin-top:50px;
+}
+.footer .socialIcons a{
+color:white;
+
+background-color: #383838;
+line-height: 33px;
+
+}
+.footer .socialIcons a:hover{
+    background-color: #00bff3;
+}
+.doctoName{
+    width:100%;
+
+}
+.footerDrImg{
+    width:20%;
+}
+.footerDrImg img{
+    border-radius: 50%;
+}
+    .doctoName .doctorDesc{
+        width:80%;
+        color:white
+    }
+    .doctoName .doctorDesc h4{
+        font-size:15px;
+        color:white;
+    }
+    .footer span{
+        font-size:14px;
+color:white;
+display: block;
+    }
+    .doctoName{
+        margin-top:35px;
+        border-bottom:1px  white dashed ;
+        padding-bottom:30px;
+    }
+
+    .doctoName:last-child{
+        border-bottom:0;
+    }
+    .tel{
+        margin-top:40px;
+    }
+    .tel,.emailsub{
+        font-size:18px;
+
+    }
+    .subtitle{
+        font-size:16px;
+        margin-top:40px;
+    }
+    .footerinput{
+    border:0;
+width:100%;
+height:55px}
+.footerinput::placeholder{
+    padding-left:20px;
+    font-size: 12px;
+    color:#e3e3e3;
+}
+.sendmail{
+    position: absolute;
+    background-color:#00bff3;
+    height:55px;
+    right:0;
+    line-height: 55px;
+    top:0;
+    text-align: center;
+    width:20%;
+}
+.inputemail{
+    margin-top:20px;
+    position: relative;   
+    height:55px;
+    width:100%;
+
+}
+.sendmail i{
+    color:white;
+}
+.copy-right{
+    background-color: #131313;
+    padding:32px;
+    text-align: center;
+}
+.coptText{
+    color:white;
+    font-size:13px;   
+     font-family: "Sansation_Regular";
+
+
+}
+.contactForm{
+    text-align: center;
+    width:100%;
+    margin-top:111px
+
+}
+.contactForm form{
+    margin-top:55px;
+    margin-bottom:40px;
+
+}
+.contactForm textarea{
+    width:100%;
+    resize:none;
+}
+.sendComment{
+    color:white;
+    background-color: #00bff3;
+    border:0;
+    text-align: center;
+    padding:15px 35px !important;
+}
+.contactForm .formControl{
+    background-color: #fbfbfb;
+    border:0;
+    padding:15px;
+}
+.contactForm .formControl::placeholder{
+    padding-left:30px;
+    font-size:14px;
+    color:#c5c5c5;
+    font-family: "Sansation_Regular";
+
+
+}
+.contactForm .formControl.contactformControl{
+    width:33%;
+
+}
+.googlemap{
+    padding-bottom:120px;
+}
+.underSection{
+    margin-top:35px;
+    color:#00bff3;
+    position: relative;
+}
+.underSection i{
+    width: fit-content;
+    font-size:14px;
+    padding:0 13px;
+    background-color: white;
+}
+
+.underSection hr{
+    width:150px;
+    position: absolute;
+    border:1px solid #00bff3;
+    left: 42%;
+    z-index: -1;
+    top: -48%;
+}
+#map{
+    margin-bottom: 70px;
+}
+.contactDetails{
+    border:18px solid #00bff3;
+    padding:55px 60px;
+}
+.details{
+    border-radius: 5px;
+    border:1px solid white;
+}
+.details .headerDesc i{
+    color:#00bff3;
+    font-size: 30px;
+    margin-right: 20px;
+    display: inline-block
+}
+.details .headerDesc{
+    margin-left:125px;
+}
+.details .headerDesc:first-child{
+    margin-left:0;
+}
+.details .headerDesc h6{
+    font-size:15px;
+    font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .heroSec{
+        height:450px;
+        padding-top:100px;
+    }
+    .heroCont h1{
+        font-size:20px;
+    }
+    .heroCont .herologo{
+        margin-right:2px;
+    }
+     .learnMore ,.purchase{
+        padding:10px 15px !important;
+    }
+    .provider {
+        width:100%;
+margin:10px;
+    }
+    .SectionTitle  h4{
+        font-size: 27px; 
+    }
+.workingHours,.Appoinment{
+    width:100%;
+    padding:20px;
+    float:none !important;
+}
 }
