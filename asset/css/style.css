@@ -136,7 +136,7 @@ left: 24%;
 border:1px solid transparent;
 transition: all .6s;
 }
-.navbar.nav-link:after{
+.navbar .nav-link:after{
     content: "";
 position: absolute;
 width: 0;
@@ -1267,8 +1267,16 @@ height:55px}
     font-family: "Sansation_Bold";
     padding:15px 35px !important;
 }
+.owl-dots{
+    display: none !important;
+}
 
 @media (min-width: 320px) and (max-width: 767px){
+    .header{display:none;}
+    .DoctorSlider .owl-nav{
+bottom:-8%;
+left:40%;
+    }
     .heroSec{
         height:450px;
         padding-top:100px;
@@ -1294,12 +1302,23 @@ margin:10px;
     padding:20px;
     float:none !important;
 }
-.ServicDesc,.ServiceImg {
-width:100%;
-float:none;
-}
+
 .ServicDesc p{
     margin-top:10px;
+}
+.ServicDesc h5{
+    margin-top:5px;
+}
+.formAppoint .formControl.phoneEmail{
+    width:46%;
+}
+.DoctorsStuff {
+    padding-bottom:50px;
+}
+.formControl::placeholder{
+    font-size:11px !important;
+}
+
 }
 @media(max-width:575.5px){
     .blog-social{
