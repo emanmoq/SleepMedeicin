@@ -14,9 +14,11 @@
     src: url("../Fonts/Lato2OFL/Lato-Regular.ttf");
 
 }
+@font-face{
+    font-family: "Sansation_Bold_Italic";
+    src: url("../font/sansation/Sansation_Bold_Italic.ttf");
 
-
-
+}
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -1151,6 +1153,121 @@ height:55px}
     font-size:15px;
     font-weight: bold;
 }
+.blog-social{
+    width:97%;
+}
+.singleBlog .social a{
+    color:#444444;
+    font-size: 12px;
+    padding:10px;
+}
+.singleBlog .d-flex .icon{
+    background:#00bff3;
+    color:white;
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    position: absolute;
+    left:-33px;
+    top:-5px;
+}
+.text{
+    font-size: 13px;
+    color:#444;
+    font-family: "Sansation_Italic";
+
+}
+.singleBlog .card-top:after{
+    display: none
+}
+
+
+.singleBlog .card-top img{
+    height: 400px;
+    object-fit: cover
+}
+.singleBlog span.badge-primary{
+    background: #0085d3
+}
+
+.singleBlog .card-title{
+    font-family: "Montserrat-Bold";
+    font-size: 22px;
+}
+.singleBlog .number{
+    padding-left: 20px;
+}
+.singleBlog .card-text{
+    text-align: justify;
+    line-height: 2;
+    font-size: 13px;
+}
+
+.title-inside{
+    font-size: 20px;
+    color:#3d3d3d;
+    font-family: "Sansation_Regular";
+}
+.note{
+    background:#00bff3;
+    padding:40px 20px;
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:60px;
+    border-radius: 5px;
+    position: relative;
+}
+.note p{
+    color:white;
+    font-family: "Sansation_Bold_Italic";
+    font-size: 16px;
+    width: 75%;
+    padding:20px 0;
+    margin: auto;
+}
+.note .top{
+    color:white;
+    
+    border:2px dashed white;
+    width:90px;
+    height: 90px;
+    text-align: center;
+    font-size:20px;
+    border-radius: 100%;
+    margin: -86px auto 0;
+}
+.top i{
+    padding: 20px 0 0;
+    background: #00bff3;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 14px auto
+}
+
+
+.contactForm{
+    width:100%;
+    margin-top:111px
+
+}
+.singleBlog .contactForm form{
+    margin-top:25px;
+    margin-bottom:40px;
+
+}
+.singleBlog .sendComment{
+    color:white;
+    background-color: #0085d3;
+    border:0;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Sansation_Bold";
+    padding:15px 35px !important;
+}
+
 @media (min-width: 320px) and (max-width: 767px){
     .heroSec{
         height:450px;
@@ -1177,4 +1294,23 @@ margin:10px;
     padding:20px;
     float:none !important;
 }
+.ServicDesc,.ServiceImg {
+width:100%;
+float:none;
+}
+.ServicDesc p{
+    margin-top:10px;
+}
+@media(max-width:575.5px){
+    .blog-social{
+        width:92%;
+    }
+}
+@media(max-width:400px){
+    .singleBlog .social a{
+        padding:2px;
+    }
+    .text{
+        font-size: 10px;
+    }
 }
