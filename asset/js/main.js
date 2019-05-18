@@ -34,7 +34,7 @@ $(document).ready(function () {
       $(window).scroll(function () {
         scrollTop = $(window).scrollTop();
 
-         if( scrollTop >0){
+         if( scrollTop >$('.header').height()){
             $('.navbar').addClass('scrollNav');
 
          }
@@ -131,7 +131,19 @@ $(document).ready(function () {
             }
         }
     });
+    $('.galaryCarusel').owlCarousel({
+        loop:true,
+
+        autoplay:true,
+        margin:20,
+        responsive:{
+            0:{
+                items:2
+         
+            }
+        }
+    });
    
-      
 });
+
 

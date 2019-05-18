@@ -29,18 +29,23 @@ img{
     background-color: white;
     width:100%;
     height:110px;
-    padding-top:15px;
     position: relative;
 }
 .headerCont{
     display: inline-block;
-    padding-left:20px;
-    padding-top:10px;
+    padding:0 20px;
+    border-right: 1px solid #adadad;
 }
 .headerCont:first-child{
     padding-left:0;
-
 }
+
+.headerCont:last-child{
+    padding-right:0;
+    border-right:none;
+}
+
+
 .headerimg{
     width:14px;
     height:14px;
@@ -56,9 +61,7 @@ img{
     display: inline-block;
     font-weight: 500;
 }
-.socialIcons{
-    float: right;
-}
+
 
 .socialIcons a{
     border-radius: 5px;
@@ -66,17 +69,23 @@ color:#4b4b4b;
 text-decoration: none;
 display: inline-block;
 list-style-type: none;
-width:35px;
-height: 35px;
+width:30px;
+height: 30px;
 background-color: #fafafa;
 margin-right:3px;
 line-height: 32px;
 text-align: center;
 font-size:15px;
 transition: all 1s;
+float: right;
 }
 .socialIcons a:first-child{
     margin-right:0
+}
+
+.upperheader{
+    padding-top:20px;
+    padding-bottom: 20px;
 }
 .socialIcons a:hover{
     background-color: #50cb8c;
@@ -88,10 +97,9 @@ transition: all 1s;
     padding-top:10px;
 }
 .blackNav{
-    width:100%;
-    position: absolute;
-    top:50%;
-    left:0;
+    top: 50%;
+    left: 0;
+    margin: auto;
     
 }
 .navbar{
@@ -108,25 +116,23 @@ transition: all 1s;
     width:160px;
     height:60px;
     display: inline-block;
- 
+     transition-duration: 2s;
+
 }
 .logo:hover{
     transform: rotate(360deg);
-    transition-duration: 2s;
 }
 
 .navbar .nav-link{
     color:white;
-    font-size:18px;
+    font-size:16px;
 padding:10px 25px  !important;
   text-align: center;
   position: relative;
 }
 .home{
     padding-left:10px 15px !important;}
-.collapse{
-    display: inline-block;
-}
+
 .navbar .nav-link:before{
     content: "";
 position: absolute;
@@ -165,10 +171,11 @@ color:white !important;
 .navBtn{
     background-color: #00bff3;
     font-size:14px;
-    font-weight: bold;
+        position: absolute;
+    right: 50px;
 }
 .btn.navBtn{
-    padding: 15px 20px !important;
+    padding: 10px 20px !important;
 }
 .heroSec{
     width:100%;
@@ -196,15 +203,15 @@ background-position: center;
 .herologo{
     width:50px;
     height:70px;
-display: inline-block;
     margin-right:40px;
+    float:left;
 }
 .scrollNav{
     top:0 !important;
     z-index: 999999;
     animation-duration: 1s;
     background: rgb(255, 255, 255) !important;
-    position: fixed;
+    position: fixed !important;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 7px 3px;
     transition: 1s all;
 
@@ -246,7 +253,7 @@ font-family: "Sansation_Bold";
 }
 .herobtn .purchase{
     background-color: #00bff3;
-    padding:15px 33px !important;
+    /*padding:15px 33px !important;*/
 }
 .paddingSec{
     padding-top:125px;
@@ -297,6 +304,7 @@ border-bottom-left-radius: 40%;
     width:100%;
     margin-top:50px;
     transition: 1s all;
+    padding: 0 5px;
 
 }
 .ServicCont:hover{
@@ -325,7 +333,7 @@ transition: 1s all;
     font-family: "Sansation_Regular";
 max-height: 100px;
     margin-top:30px;
-
+text-align: justify;
 overflow: hidden;}
 
 .plus{
@@ -356,12 +364,19 @@ overflow: hidden;}
 
 }
 .AcceptedSec{
-    background-color:#f9f9fa;
+    background-color:#fff;
     padding-bottom:110px;
 }
+.viewList{
+        color:#88e1f9;
+}
+
+.AcceptedCont{
+        background: #eee;
+}
+
 .viewList a{
     float:right;
-    color:#00bff3;
     font-size:16px;
     font-family: "Sansation_Regular";
 }
@@ -375,18 +390,21 @@ overflow: hidden;}
     margin-top:20px;
 }
 .provider{
-    width:18%;
-    height: 220px;
-    background-color: white;
+    width:20%;
     text-align:center;
-    margin-right:30px;
+    padding:0 10px 0 10px;
     float:left;
-    margin-top:20px;
-    padding-top:35px;
     transition: all 1s;
+    margin-bottom: 20px;
+}
+
+.provider-inner{
+    background-color: white;
+    padding:35px 10px;
 
 }
-.provider:hover{
+
+.provider-inner:hover{
     box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
 }
 .ProvideImg{
@@ -394,6 +412,10 @@ overflow: hidden;}
     height:100px;
     margin: 0 auto;
 
+}
+
+.navbar-toggler{
+    margin-left: 15px;
 }
 .provider h6{
     font-size:20px;
@@ -406,28 +428,18 @@ overflow: hidden;}
 }
 
 .workingHours{
-    width:50%;
-    padding-top:80px;
-    padding-bottom:80px;
-    padding-left:100px;
+    padding: 100px 80px;
     background-color: #00bff3;
     color:white !important;
-    height:435px;
-    padding-right:100px;
-
 
 
 }
 .Appoinment{
-    width:50%;
-    padding-top:80px;
-    padding-bottom:80px;
-    padding-right:100px;
+    padding: 100px 80px;
+   
     background-color: #50cb8c;
     color:white;
-    padding-left:140px;
-    height: 100%;
-    height:435px;
+
 
 }
 .Appoinment .workHoursCont span{
@@ -435,8 +447,6 @@ overflow: hidden;}
 }
 .workingHoursSec{
     color:white;
-width:100%;
-height:435px;
 }
 .workHoursCont{
     margin-bottom: 40px;
@@ -683,9 +693,13 @@ margin-bottom: 36px;
     .makeAppoint .container{
         position: relative;
     }
+
+    .OurGalleryDiv{
+        height: 500px;
+    }
     .OurGallery{
         position: absolute;
-        width:50%;
+        width:90%;
         right:0;
         top:0;
         z-index: 0;
@@ -939,8 +953,8 @@ position: relative;
         font-family: "Sansation_Regular";
         }
         .help{
-            width:60%;
-        } 
+            padding-left:50px;
+        }
 #map{
     margin-top:75px;
     height:420px;
@@ -967,7 +981,7 @@ position: relative;
     font-size:20px;
 }
 .footer .socialIcons{
-    float: none;
+    float: left;
     margin-top:50px;
 }
 .footer .socialIcons a{
@@ -984,15 +998,20 @@ line-height: 33px;
     width:100%;
 
 }
+.footer .col-lg-4 > div {
+    margin-bottom: 20px;
+}
 .footerDrImg{
-    width:20%;
+    width:70px;
 }
 .footerDrImg img{
     border-radius: 50%;
 }
     .doctoName .doctorDesc{
-        width:80%;
-        color:white
+        color:white;
+            margin:0;
+            margin-left:20px;
+       
     }
     .doctoName .doctorDesc h4{
         font-size:15px;
@@ -1127,7 +1146,7 @@ height:55px}
     top: -48%;
 }
 #map{
-    margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 .contactDetails{
     border:18px solid #00bff3;
@@ -1271,8 +1290,64 @@ height:55px}
     display: none !important;
 }
 
+@media (max-width: 768px){
+.Appoinment{
+    padding: 10px;
+}
+.provider {
+    width: 33.33333%;
+    }
+.ServiceImg{
+        width: 100%;
+
+}
+.ServicDesc{
+    width: 100%;
+}
+
+.plus,.ServicCont.rightSide .plus{
+    top: auto;
+    bottom: -33px;
+    left: 40%;
+    right: auto;
+}
+
+.logoDiv{
+        position: absolute;
+    left: 103px;
+    top: 13px;
+    width: 150px;
+}
+
+.navbar {
+    position: relative;
+    padding:13px 0;
+}
+
+.navBtn {
+    top: 10px;
+}
+.socialIcons a:first-child{
+    margin-right: 5px;
+}
+.socialIcons a{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.headerCont{
+    display:block;
+    padding:0;
+    border-right:none;
+}
+
+.workingHours {
+    padding: 10px;
+}
+
+}
+
 @media (min-width: 320px) and (max-width: 767px){
-    .header{display:none;}
     .DoctorSlider .owl-nav{
 bottom:-8%;
 left:40%;
@@ -1292,16 +1367,11 @@ left:40%;
     }
     .provider {
         width:100%;
-margin:10px;
     }
     .SectionTitle  h4{
         font-size: 27px; 
     }
-.workingHours,.Appoinment{
-    width:100%;
-    padding:20px;
-    float:none !important;
-}
+
 
 .ServicDesc p{
     margin-top:10px;
@@ -1318,12 +1388,82 @@ margin:10px;
 .formControl::placeholder{
     font-size:11px !important;
 }
-
+.GalleryImg{
+    width:100%;
 }
+.GuestSec .owl-nav{
+    display: none !important;
+}
+.navbar-toggler{
+    border:0 !important;
+}
+.navbar-toggler-icon {
+    
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,191,243)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  }
+  .upperheader{
+      display: none;
+  }
+.header{
+    height:auto !important;
+}
+  .ServicCont.rightSide .ServicDesc{
+      margin-top:20px;
+  }
+  .ServicDesc p{
+      max-height: 135px;
+  }
+  .paddingSec{
+      padding-top:30px;
+  }
+  .clinicServices{
+padding-bottom:35px;
+  }
+  .AcceptedSec{
+      padding-bottom: 0
+  }
+  .workingHours,.Appoinment{
+      padding-top:30px;
+  }
+  .help{
+      padding-left:0;
+  }
+  .contactSec h4{
+      font-size:18px;
+  }
+  .contactSec span{
+      font-size:13px;
+  }
+  .footer h4{
+      margin-top:30px;
+  }
+  .footer .socialIcons{
+      margin-top:20px;
+  }
+  .doctoName h4{
+      margin:0;
+  }
+
+  .helpbtn{
+      margin-top:20px;
+      float:none !important;
+  }
+}
+
 @media(max-width:575.5px){
     .blog-social{
         width:92%;
     }
+    .header{
+            height: 150px;
+    }
+.socialIcons{
+margin-top: 15px;
+}
+    .socialIcons a{
+float: left;
+    }
+  
 }
 @media(max-width:400px){
     .singleBlog .social a{
@@ -1332,4 +1472,30 @@ margin:10px;
     .text{
         font-size: 10px;
     }
+
+    .headerDesc span.new-line{
+        margin-left: 30px;
+    }
+     .header{
+            height: 170px;
+    }
+    .logoDiv{
+        display: none;
+    }
+
+    .header {
+    height: 190px;
+}
+
+.navBtn{
+        right: 19px;
+}
+
+#navbarSupportedContent{
+    margin-top: 50px;
+}
+
+.nav-item {
+    width: 100%;
+}
 }
