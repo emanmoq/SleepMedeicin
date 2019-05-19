@@ -1,21 +1,5 @@
 $(document).ready(function () {
-    var wow = new WOW(
-        {
-          boxClass:     'wow',   
-          mobile:false,
-
-          // animated element css class (default is wow)
-          animateClass: 'animated', // animation css class (default is animated)
-          offset:       0,          // distance to the element when triggering the animation (default is 0)
-          live:         true,       // act on asynchronously loaded content (default is true)
-          callback:     function(box) {
-            // the callback is fired every time an animation is started
-            // the argument that is passed in is the DOM node being animated
-          },
-          scrollContainer: null // optional scroll container selector, otherwise use window
-        }
-      );
-      wow.init();
+   
 
     shareItem=false;
     $(".shareItemDisplay").click(function() {
@@ -41,27 +25,7 @@ $(document).ready(function () {
          else{
             $('.navbar').removeClass('scrollNav');
          }
-         scrollTop = $(window).scrollTop()
-
-         if(scrollTop>=$("#services").offset().top & scrollTop < $(".AcceptedSec").offset().top ){
-            $(".nav-link").removeClass("activeLink");
-            $(".servicesLink").addClass("activeLink");
-         }
-         else if(scrollTop>=$("#team").offset().top & scrollTop < $(".makeAppoint").offset().top ){
-            $(".nav-link").removeClass("activeLink");
-            $(".teamLink").addClass("activeLink");
-           
-         }
-         else if(scrollTop>=$("#blog").offset().top & scrollTop < $(".GuestSec").offset().top ){
-            $(".nav-link").removeClass("activeLink");
-            $(".blogLink").addClass("activeLink");
-           
-         }
-         else if(scrollTop>=$("#contact").offset().top ){
-            $(".nav-link").removeClass("activeLink");
-            $(".contactLink").addClass("activeLink");
-           
-         }
+         
    
         });
         $(".servicesLink").click(function() { 
@@ -124,6 +88,7 @@ $(document).ready(function () {
         autoplay:false,
         nav:true,
         margin:20,
+        navClass:['owl-prev','owl-next'],
         responsive:{
             0:{
                 items:1
@@ -135,7 +100,7 @@ $(document).ready(function () {
         loop:true,
 
         autoplay:true,
-        margin:20,
+        
         responsive:{
             0:{
                 items:2

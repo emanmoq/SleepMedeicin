@@ -188,6 +188,17 @@ position: relative;
 color:white;
 background-position: center; 
 }
+.innerheroSec{
+    width:100%;
+    height:250px;
+    background-image:url("../img/inner.png");
+    background-repeat: no-repeat;
+background-size:cover;
+position: relative;
+color:white;
+background-position: center; 
+padding-top:140px
+}
 .heroCont{
     color:black;
 
@@ -240,21 +251,30 @@ color:black;
 .herobtn a{
 margin-right:15px;
 border:0;
-padding:15px 45px;
 font-size:12px;
+padding:15px 0;
 font-family: "Sansation_Bold";
+text-align: center;
 
 }
 .herobtn .learnMore{
     background-color:#50cb8c;
+    width:170px;
 }
 .herobtn .learnMore:hover{
     background-color: #59bb89;
 }
 .herobtn .purchase{
     background-color: #00bff3;
-    /*padding:15px 33px !important;*/
+    width:170px;
+    
 }
+.herobtn .purchase:hover{
+    background-color: #108daf !important;
+    box-shadow: rgba(0,0,0,.3) 0 0 4px 2px;
+}
+
+
 .paddingSec{
     padding-top:125px;
 }
@@ -431,22 +451,60 @@ overflow: hidden;}
     padding: 100px 80px;
     background-color: #00bff3;
     color:white !important;
-
-
 }
+
 .Appoinment{
     padding: 100px 80px;
    
     background-color: #50cb8c;
     color:white;
+}
+.workingHours table td{
+    padding:24px 
 
+}
+.workingHours table tr{
+    border-bottom:1px dashed  white;
 
+}
+.workingHours table tr:last-child{
+    border:0;
+}
+.calender{
+color:rgba(0,0,0,.1);
+width:100px;
+float:right;
+position: absolute;
+right:50px;
+top:100px;
+}
+.appointBook{
+    margin-top:40px;
+
+}
+.bookAppointment{
+    color:black !important;
+    background-color:white;
+    font-size: 12px;
+    font-family: "Sansation_Bold";
+    padding:10px 15px !important;
+    border:0;
+
+}
+.bookAppointment:hover{
+    background-color: #00bff3 !important;
+    box-shadow: rgba(0,0,0,.3) 0 0 4px 2px;
 }
 .Appoinment .workHoursCont span{
     font-size:15px; 
 }
 .workingHoursSec{
     color:white;
+}
+.Appoinment .workHoursCont h6{
+    font-family: "Sansation_Regular";
+    font-size:15px; 
+    margin-top:30px;
 }
 .workHoursCont{
     margin-bottom: 40px;
@@ -789,6 +847,33 @@ position: relative;
         height:2px;
         flex:5
     }
+    .innerheroCont h1{
+        font-size:32px;
+        font-weight: bold;
+        position: relative;
+        display:inline-block;
+    
+    }
+    
+    .innerheroCont h1:after{
+content: "";
+width:40px;
+position: absolute;
+border:2px solid white; 
+bottom: 8px;
+left: 105%;   }
+.innerheroCont span {
+    margin-left:50px;
+}
+.innerheroCont span a{
+    font-size:12px;
+    color:white;
+
+}
+.innerheroCont span a:hover{
+    text-decoration: none;
+    color:#00bff3;
+}
     .BlogSec{
         padding-bottom:75px;
     }
@@ -893,6 +978,7 @@ text-align: left;
 
     }.GuestCarusel{
         margin-top:65px;
+        position: relative;
     }
     .gusetComment{
         font-size: 16px;
@@ -910,16 +996,20 @@ text-align: left;
 color:#c5c5c5;
 font-size:13px;
         }
-        .GuestSec .owl-nav{ display:block !important;
+        .GuestCarusel .owl-stage-outer{
+            position: relative;
+        }
+        .GuestCarusel .owl-nav{ 
+            display:block !important;
             position: absolute;
-            top:45%;
+            top:42%;
+            width:100% !important;
+            height:auto !important;
           
-        }.GuestCarusel{
-position: relative;
         }
         .GuestSec .owl-nav button{
             background-color:transparent;
-            position: absolute;
+            position: absolute !important ;
             border:0;
             padding:15px 17px;
             color:white;
@@ -927,14 +1017,18 @@ position: relative;
             border-radius: 50%;
             font-size:14px;
             text-align: center;
+
         }
         .GuestSec .owl-nav button:hover{
             background-color:black;
             color:white;
             box-shadow:rgba(0,0,0,.3) 0 0 6px 1px;
         }
-        .GuestSec .owl-nav button.owl-next{
-            right:0;
+        .GuestSec  .owl-carousel .owl-nav .owl-prev{
+            left: -60px !important;
+        }
+        .GuestSec .owl-nav .owl-next{
+            right: -60px !important;
         }
         .contactSec{
             background-color:#1a1a1a;
@@ -1020,7 +1114,6 @@ line-height: 33px;
     .footer span{
         font-size:14px;
 color:white;
-display: block;
     }
     .doctoName{
         margin-top:35px;
@@ -1143,7 +1236,7 @@ height:55px}
     border:1px solid #00bff3;
     left: 42%;
     z-index: -1;
-    top: -48%;
+    top: -22%;
 }
 #map{
     padding-bottom: 70px;
@@ -1151,6 +1244,7 @@ height:55px}
 .contactDetails{
     border:18px solid #00bff3;
     padding:55px 60px;
+    margin-top:68px;
 }
 .details{
     border-radius: 5px;
@@ -1163,8 +1257,8 @@ height:55px}
     display: inline-block
 }
 .details .headerDesc{
-    margin-left:125px;
-}
+    margin-left:100px;
+display: inline-block}
 .details .headerDesc:first-child{
     margin-left:0;
 }
@@ -1344,10 +1438,38 @@ height:55px}
 .workingHours {
     padding: 10px;
 }
+.workingHours ul li{
+    font-size:12px;
+}
 
 }
 
 @media (min-width: 320px) and (max-width: 767px){
+    .nav-link:before{
+        display: none;
+    }
+    .nav-link::after{
+        display: none;
+    }
+    .nav-item:hover{
+        background-color: #00bff3;
+    }
+    .herobtn{
+        text-align: center;
+    }
+    .herobtn .learnMore{
+        width:110px !important;
+        text-align: center
+    }
+  
+    .herobtn .purchase{
+        width:110px !important;
+        text-align: center;
+        
+    }
+    .herobtn .purchasea a,.herobtn .purchase a{
+        font-size: 10px;
+    }
     .DoctorSlider .owl-nav{
 bottom:-8%;
 left:40%;
@@ -1362,9 +1484,7 @@ left:40%;
     .heroCont .herologo{
         margin-right:2px;
     }
-     .learnMore ,.purchase{
-        padding:10px 15px !important;
-    }
+
     .provider {
         width:100%;
     }
@@ -1377,7 +1497,7 @@ left:40%;
     margin-top:10px;
 }
 .ServicDesc h5{
-    margin-top:5px;
+    margin-top:30px;
 }
 .formAppoint .formControl.phoneEmail{
     width:46%;
@@ -1447,6 +1567,24 @@ padding-bottom:35px;
   .helpbtn{
       margin-top:20px;
       float:none !important;
+  }
+  .underSection hr{
+      left:29%;
+  }
+  .contactDetails{
+      padding:20px;
+  }
+  .details .headerDesc{
+      margin-left:0;
+      margin-top:20px;
+  }
+  .contactForm .formControl.contactformControl{
+      width:100%;
+      margin-top:20px;
+  }
+  .innerheroSec{
+      height:170px;
+      padding-top:70px;
   }
 }
 
