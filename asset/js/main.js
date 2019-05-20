@@ -2,6 +2,8 @@ $(document).ready(function () {
    
 
     shareItem=false;
+    navbartoggler=false;
+
     $(".shareItemDisplay").click(function() {
         if(shareItem)
         $(this).parent().find(".shareItem").css("display","none");
@@ -11,6 +13,14 @@ $(document).ready(function () {
         }
         shareItem=!shareItem;
       });
+      $(".navbar-toggler").click(function() {
+
+          $(".MobileMenu").animate({left:0,}, 200, function() {});
+          
+      });
+        $(".MobileMenu .close").click(function() {
+                $(".MobileMenu").animate({left: -1000,},200, function() {});
+        });
       $(".nav-link").click(function() {
        $(".nav-link").removeClass("aciveLink");
       $(this).addClass("aciveLink");
@@ -20,10 +30,14 @@ $(document).ready(function () {
 
          if( scrollTop >$('.header').height()){
             $('.navbar').addClass('scrollNav');
+            $('.MobileMenu').addClass('scrollNav');
+
 
          }
          else{
-            $('.navbar').removeClass('scrollNav');
+            $('.navbar').removeClass('scrollNav');    
+          $('.MobileMenu').removeClass('scrollNav');
+
          }
          
    

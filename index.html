@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
         <!--========================== Header   Section ===========================-->
         <div class="header">
                 <div class="upperheader">
@@ -98,7 +97,7 @@
                                         <div class="col-lg-9 col-12">
 
 
-                                                <div class="collapse navbar-collapse justify-content-center text-center"
+                                                <div class="collapse navbar-collapse  d-none d-lg-block d-md-block justify-content-center text-center"
                                                         id="navbarSupportedContent">
 
                                                         <ul class="nav nav-pills ">
@@ -136,13 +135,58 @@
 
                                                 </div>
                                         </div>
+                                      
 
                                         <a class="btn btn-primary navBtn" href="#" role="button">APPOINTMENT</a>
+
+                                        
+                           
 
 
                                 </div>
 
                         </nav>
+                        <div class="collapse navbar-collapse MobileMenu d-none justify-content-center text-center"
+                        id="navbarSupportedContent">
+                
+                        <a  class="close"  aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                        </a>
+
+                        <ul class="nav nav-pills ">
+
+                                <li class="nav-item ">
+                                        <a class="nav-link home activeLink"
+                                                href="index.html">
+                                                Home</a>
+                                </li>
+
+
+                                <li class="nav-item ">
+                                        <a class="nav-link  servicesLink "
+                                                href="#services">Services
+                                        </a>
+                                </li>
+                                <li class="nav-item ">
+                                        <a class="nav-link teamLink" href="#team">Team
+
+                                        </a>
+                                </li>
+                                <li class="nav-item ">
+                                        <a class="nav-link blogLink" href="#blog">Blog
+
+                                        </a>
+                                </li>
+                                <li class="nav-item ">
+                                        <a class="nav-link contactLink "
+                                                href="#contact">Contact
+
+                                        </a>
+                                </li>
+
+                        </ul>
+
+                </div>
                 </div>
 
         </div>
@@ -300,7 +344,7 @@
         </div>
         <!--========================== Acccepted Services  Section ===========================-->
 
-        <div class="AcceptedSec paddingSec ">
+        <div class="AcceptedSec ">
                 <div class="container">
                         <div class="row justify-content-center">
                                 <div class="col-lg-12 col-sm-12 text-center">
@@ -311,18 +355,15 @@
                                                         <div class="leftSep"></div>
                                                         <div class="rightSep"></div>
                                                 </div>
-
                                         </div>
-
                                 </div>
                         </div>
                 </div>
-                <!--========================== Accepted Section ===========================-->
-
+                                                
                 <div class="AcceptedCont  clearfix">
-                        <div class="container">
+                        <div class="container-fluid">
                                 <div class="row">
-                                        <div class="viewList col-12"><a>View full list of Insurance</a></div>
+                                        <div class="viewList col-12"><a href="#" data-toggle="modal" data-target="#exampleModalLong">View full list of Insurance</a></div>
                                         <div class="AcceptedProviders clearfix justify-content-center">
 
                                                 <div class="provider">
@@ -422,7 +463,42 @@
                                 </div>
                         </div>
                 </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Provider List</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <ul class="ProviderList">
+                            <li> Web Development</li>
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                            <li> Web Development</li>
+
+                    </ul>
+
+            </div>
+
+          </div>
         </div>
+      </div>
+       </div>
         <!--========================== Worrking Hours Section ===========================-->
 
         <div class="workingHoursSec clearfix ">
@@ -726,33 +802,34 @@
 
                                         <div class="OurGallery">
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/1.png">
+                                                        <a class=" html5lightbox" href="asset/img/Gallery/1.png" ><img src="asset/img/Gallery/1.png"></a>
+                                                        
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/2.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/2.png" ><img src="asset/img/Gallery/2.png"></a>
 
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/3.png">
+                                                                <a class=" html5lightbox "  href="asset/img/Gallery/3.png"  ><img src="asset/img/Gallery/3.png"></a>
 
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/4.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/4.png"  ><img src="asset/img/Gallery/4.png"></a>
                                                 </div>
                                                 <div class="GalleryImg galleryText">
                                                         <h4> OUR GALLERY</h4>
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/5.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/5.png"  ><img src="asset/img/Gallery/5.png"></a>
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/6.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/6.png"  ><img src="asset/img/Gallery/6.png"></a>
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/7.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/7.png"  ><img src="asset/img/Gallery/7.png"></a>
                                                 </div>
                                                 <div class="GalleryImg">
-                                                        <img src="asset/img/Gallery/8.png">
+                                                                <a class=" html5lightbox"  href="asset/img/Gallery/8.png"  ><img src="asset/img/Gallery/8.png"></a>
                                                 </div>
                                                 <div class="clrearfix"></div>
                                         </div>
@@ -983,8 +1060,8 @@
 
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-12">
-                                        <a class="btn btn-primary purchase helpbtn float-right" href="contact.html"
-                                                role="button">I
+                                        <a class="btn btn-primary  helpbtn float-right" href="contact.html"
+                                                >I
                                                 NEED HELP</a>
                                 </div>
                         </div>
@@ -1005,7 +1082,7 @@
                                                 <img src="asset/img/logo.png">
 
                                         </div>
-                                        <h4>ABOUT INFORMATION</h4>
+                                        <h4 class="footerTitle first">ABOUT INFORMATION</h4>
                                         <span>Claritas est etiam processus dynamicus, qui sequitur
                                                 mutationem consuetudium lectorum. Claritas est etiam
                                                 processus dynamicus, qui sequitur.</span>
@@ -1017,7 +1094,7 @@
                                         </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <h4> TOP DOCTORS</h4>
+                                        <h4 class="footerTitle"> TOP DOCTORS</h4>
                                         <div class="doctoName clearfix">
 
                                                 <div class="footerDrImg float-left">
@@ -1062,7 +1139,7 @@
                                         </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-6 ">
-                                        <h4> EMAIL SUPSCRIBE</h4>
+                                        <h4 class="footerTitle"> EMAIL SUPSCRIBE</h4>
                                         <span>Lorem ipsum dolor sit amet, consectetur ili adipiscing elit
                                                 fringilla commodo Maecenasgue eget…</span>
                                         <div class="inputemail">
@@ -1071,8 +1148,8 @@
                                                                         class="fas fa-chevron-right"></i></a>
                                                 </div>
                                         </div>
-                                        <span class="tel">(702) 478-7324</span>
-                                        <span class="emailsub">lvsleepcenterpllc@gmail.com</span>
+                                        <span class="tel"> <i class="fas fa-phone-volume" style="display: inline-block"></i>(702) 478-7324</span>
+                                        <span class="emailsub"> <i class="fas fa-envelope"></i> lvsleepcenterpllc@gmail.com</span>
                                         <span class="subtitle">2400 S Cimarron Rd, Suite 130, Las Vegas, NV
                                                 89117</span>
 
@@ -1087,6 +1164,8 @@
                 <div class="coptText"><span style="color:#4aba80">Sleep medicine clinic-</span> <span>Copyright
                                 2019.</span> <span style="color:#00bff3">Design by MohammedRiyati</span></div>
         </div>
+</body>
+
 
 
 
@@ -1096,6 +1175,7 @@
         <script src="asset/js/bootstrap.min.js"></script>
         <script src="asset/js/owl.carousel.js"></script>
         <script src="asset/js/wow.js"></script>
+        <script src="asset/js/html5lightbox.js"></script>
         <script src="asset/js/main.js"></script>
         <script src="asset/js/mainindex.js"></script>
 
@@ -1112,6 +1192,5 @@
                 async defer></script>
 
 
-</body>
 
 </html>

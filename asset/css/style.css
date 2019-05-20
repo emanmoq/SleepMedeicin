@@ -97,20 +97,25 @@ float: right;
     padding-top:10px;
 }
 .blackNav{
+width:1340px;
     top: 50%;
-    left: 0;
-    margin: auto;
+  margin: auto;
     
 }
 .navbar{
-    background-color: black;
+    background-color: #1b1b26;
     border-radius: 0;
     padding:25px 0;
     z-index: 1;
     transform: 1s all;
     width:100%;
 
-    
+}
+.blackNav .bg-dark{
+    background-color: #1b1b26 !important;
+}
+.MobileMenu{
+    display:none !important;
 }
 .logo{
     width:160px;
@@ -123,7 +128,7 @@ float: right;
     transform: rotate(360deg);
 }
 
-.navbar .nav-link{
+.navbar .nav-link,.MobileMenu .nav-link{
     color:white;
     font-size:16px;
 padding:10px 25px  !important;
@@ -173,6 +178,7 @@ color:white !important;
     font-size:14px;
         position: absolute;
     right: 50px;
+    border:0;
 }
 .btn.navBtn{
     padding: 10px 20px !important;
@@ -219,13 +225,15 @@ padding-top:140px
 }
 .scrollNav{
     top:0 !important;
-    z-index: 999999;
+    z-index: 555;
     animation-duration: 1s;
     background: rgb(255, 255, 255) !important;
     position: fixed !important;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 7px 3px;
-    transition: 1s all;
-
+    transition: .8s all;
+}
+.scrollNav.bg-dark{
+    background: rgb(255, 255, 255) !important; 
 }
 .scrollNav.navbar{
     padding:10px 0;
@@ -276,7 +284,7 @@ text-align: center;
 
 
 .paddingSec{
-    padding-top:125px;
+    padding-top:115px;
 }
 .clinicServices{
     background-color: white;
@@ -322,23 +330,24 @@ border-bottom-left-radius: 40%;
 }
 .ServicCont{
     width:100%;
-    margin-top:50px;
+    margin-top:45px;
     transition: 1s all;
     padding: 0 5px;
 
 }
-.ServicCont:hover{
-    box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
-transition: 1s all;
-}
+
 
 .ServiceImg{
-    width:40%;
+    width:45%;
     float:left;
     position: relative;
+    height:177px;
+}
+.ServiceImg img{
+    height:100%;
 }
 .ServicDesc{
-    width:50%;
+    width:48%;
     float:right;
 }
 .ServicDesc h5{
@@ -351,10 +360,11 @@ transition: 1s all;
     font-size:15px;
     color:#666666;
     font-family: "Sansation_Regular";
-max-height: 100px;
+max-height: 107px;
     margin-top:30px;
 text-align: justify;
-overflow: hidden;}
+overflow: hidden;
+margin-bottom:0}
 
 .plus{
     position: absolute;
@@ -384,17 +394,39 @@ overflow: hidden;}
 
 }
 .AcceptedSec{
-    background-color:#fff;
     padding-bottom:110px;
+    padding-top:60px;
+    background: #eee;
 }
-.viewList{
-        color:#88e1f9;
-}
-
-.AcceptedCont{
-        background: #eee;
+.viewList a{
+        color:#878787;
 }
 
+
+.modal-body {
+    background: #f9fafa;}
+    h5.modal-title{
+        color: #191b1f;
+        font: 32px "open_sanslight", arial, sans-serif;
+        padding: 10px;
+    }
+    .modal-header .close {
+        margin: 10px 10px 0 0;
+        background: #d7dfe2;
+        color: #fff;
+        display: inline-block;
+        border: 0;
+        width: 37px;
+        height: 37px;
+        opacity: 0.5;
+        text-shadow: none;
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center !important;
+        line-height: 7px;
+        border-radius: 50%;
+padding:0 !important;
+    }
 .viewList a{
     float:right;
     font-size:16px;
@@ -402,8 +434,6 @@ overflow: hidden;}
 }
 .AcceptedCont{
     padding:20px;
-    margin-top:80px;
-
 }
 .AcceptedProviders{
     width:100%;
@@ -425,13 +455,18 @@ overflow: hidden;}
 }
 
 .provider-inner:hover{
-    box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
+    box-shadow: rgba(0,0,0,.2) 0 0 2px 1px;
 }
 .ProvideImg{
     width:90px;
     height:100px;
     margin: 0 auto;
 
+}
+.ProviderList li{
+    list-style-type: none;
+    padding: 3px 0;
+    font-size:16px;
 }
 
 .navbar-toggler{
@@ -448,7 +483,7 @@ overflow: hidden;}
 }
 
 .workingHours{
-    padding: 100px 80px;
+    padding: 75px 80px;
     background-color: #00bff3;
     color:white !important;
 }
@@ -485,7 +520,7 @@ top:100px;
 .bookAppointment{
     color:black !important;
     background-color:white;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Sansation_Bold";
     padding:10px 15px !important;
     border:0;
@@ -493,7 +528,7 @@ top:100px;
 }
 .bookAppointment:hover{
     background-color: #00bff3 !important;
-    box-shadow: rgba(0,0,0,.3) 0 0 4px 2px;
+    box-shadow: rgba(0,0,0,.3) 0 0 2px 1px;
 }
 .Appoinment .workHoursCont span{
     font-size:15px; 
@@ -532,9 +567,7 @@ top:100px;
     transition: all 1s;
 
 }
-.DoctorBox:hover{
-    box-shadow: rgba(0,0,0,.2)0 0 6px 2px;
-}
+
 .doctorImg{
     width:100%;
     height:70%;
@@ -800,7 +833,7 @@ position: relative;
          top: 10%;
      }
 
-     .col-lg-4 > div{
+     .blogmargin{
         margin-bottom:50px;
     }
     .title{
@@ -875,7 +908,7 @@ left: 105%;   }
     color:#00bff3;
 }
     .BlogSec{
-        padding-bottom:75px;
+        padding-bottom:65px;
     }
     #Blogs{
         padding-bottom:110px;
@@ -907,10 +940,7 @@ left: 105%;   }
         border:0;
         transition: all 1s;
     }
-    .card:hover{
-        box-shadow: rgba(0,0,0,.2) 0 0 6px 3px;
-        transition: all 1s;
-    }
+
     .card-body{
         padding:0;
         padding-top:30px;
@@ -1057,8 +1087,11 @@ font-size:13px;
 .footer{
     background-color: #19191e;
 }
+.footer.paddingSec{
+    padding-top:105px
+}
 .footerLogo{
-    width:50%;
+    width:200px;
     margin-bottom:35px;
 }
 .footer{
@@ -1068,11 +1101,16 @@ font-size:13px;
 .footer span{
     font-size:14px;
     font-family: "Sansation_Regular";
+    display: block;
 
 }
-.footer h4{
+.footerTitle{
     font-weight:700;
     font-size:20px;
+    margin-bottom:35px;
+}
+.footerTitle.first{
+    margin-bottom:20px;
 }
 .footer .socialIcons{
     float: left;
@@ -1090,13 +1128,14 @@ line-height: 33px;
 }
 .doctoName{
     width:100%;
-
+    border-bottom:1px  white dashed ;
+    padding: 21px 0;
 }
-.footer .col-lg-4 > div {
-    margin-bottom: 20px;
+.doctoName span{
+    display: inline-block
 }
 .footerDrImg{
-    width:70px;
+    width:57px;
 }
 .footerDrImg img{
     border-radius: 50%;
@@ -1115,25 +1154,25 @@ line-height: 33px;
         font-size:14px;
 color:white;
     }
-    .doctoName{
-        margin-top:35px;
-        border-bottom:1px  white dashed ;
-        padding-bottom:30px;
+    .doctoName:first-child{
+        padding-top:0;
     }
 
     .doctoName:last-child{
         border-bottom:0;
     }
     .tel{
-        margin-top:40px;
+        margin-bottom:15px;
     }
     .tel,.emailsub{
         font-size:18px;
-
+    }
+    .tel i,.emailsub i{
+        margin-right:10px
     }
     .subtitle{
         font-size:16px;
-        margin-top:40px;
+        margin-top:30px;
     }
     .footerinput{
     border:0;
@@ -1159,6 +1198,7 @@ height:55px}
     position: relative;   
     height:55px;
     width:100%;
+    margin-bottom:40px;
 
 }
 .sendmail i{
@@ -1383,7 +1423,9 @@ display: inline-block}
 .owl-dots{
     display: none !important;
 }
-
+.helpbtn{
+    background-color: #00bff3 !important
+}
 @media (max-width: 768px){
 .Appoinment{
     padding: 10px;
@@ -1393,7 +1435,6 @@ display: inline-block}
     }
 .ServiceImg{
         width: 100%;
-
 }
 .ServicDesc{
     width: 100%;
@@ -1445,8 +1486,55 @@ display: inline-block}
 }
 
 @media (min-width: 320px) and (max-width: 767px){
-    .nav-link:before{
-        display: none;
+    .blackNav{
+        width:100%;
+    }
+    .activeLink::before{
+display: none;
+    }
+    .activeLink{
+        background-color: #00bff3;;
+            }
+          
+    .MobileMenu{
+        left:0;
+        padding-top:50px;
+        margin-top: 0 !important;
+display:block !important;
+position: absolute;
+text-align: left !important;
+left:-1000px;
+background-color: #1b1b26;
+top:0 !important;
+z-index: 5555;
+transition: all .2s !important;
+    }
+    .MobileMenu  .nav-link{
+        text-align: left !important;
+    }
+    .MobileMenu .close{
+        border: 0;
+        width: 37px;
+        height: 37px;
+        opacity: 1;
+        text-shadow: none;
+        font-weight: normal;
+        font-size: 30px;
+        text-align: center !important;
+        line-height: 7px;
+        border-radius: 50%;
+padding:0 !important;
+position: absolute;
+top:20px;
+right:20px;
+    }
+    .MobileMenu .close span{
+        color:#00bff3;
+
+    }
+   
+    .scrollNav .collapse.navbar-collapse{
+        background-color: white !important;
     }
     .nav-link::after{
         display: none;
@@ -1486,10 +1574,24 @@ left:40%;
     }
 
     .provider {
-        width:100%;
+        width:33.333%;
     }
     .SectionTitle  h4{
         font-size: 27px; 
+    }
+    .provider-inner {
+        padding:7px;
+    }
+    .ProvideImg{
+        width:35px;
+        height:auto;
+    }
+   
+        
+.provider-inner h6 {
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 13px;
     }
 
 
@@ -1503,7 +1605,7 @@ left:40%;
     width:46%;
 }
 .DoctorsStuff {
-    padding-bottom:50px;
+    padding-bottom:95px;
 }
 .formControl::placeholder{
     font-size:11px !important;
@@ -1540,6 +1642,7 @@ left:40%;
 padding-bottom:35px;
   }
   .AcceptedSec{
+
       padding-bottom: 0
   }
   .workingHours,.Appoinment{
@@ -1567,6 +1670,7 @@ padding-bottom:35px;
   .helpbtn{
       margin-top:20px;
       float:none !important;
+      background-color: #00bff3 !important;
   }
   .underSection hr{
       left:29%;
@@ -1589,6 +1693,8 @@ padding-bottom:35px;
 }
 
 @media(max-width:575.5px){
+  
+
     .blog-social{
         width:92%;
     }
