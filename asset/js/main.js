@@ -4,6 +4,9 @@ $(document).ready(function () {
     shareItem=false;
     navbartoggler=false;
     
+    $( "#datepicker" ).datepicker({
+        buttonImageOnly: true
+    })
 
 
     $(".shareItemDisplay").click(function() {

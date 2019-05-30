@@ -721,6 +721,7 @@ font-size:28px;
     border-radius: 5px;
     height:45px;
 }
+
 .formAppoint .formControl::placeholder{
     color:white;
     padding:20px 25px;
@@ -734,29 +735,12 @@ font-size:28px;
 .formControl.phoneEmail.lastinput{
     margin-right: 0;
 }
-.appDate{
-    padding:20px;
-}
 
 .appDate {
     background:transparent;
     background:#fff url("../img/date.png")  97% 50% no-repeat ;
   }
-  .appDate::-webkit-inner-spin-button {
-    display: none;
-  }
-  .appDate::-webkit-calendar-picker-indicator {
-    opacity: 0;
-  }
-  input::-webkit-datetime-edit-day-field,
-  input::-webkit-datetime-edit-month-field,
-  input::-webkit-datetime-edit-year-field
-
-  {
-      color: white;
-      outline: none;
-      background-color: transparent;
-  }
+  
   
   /* custom styles */
 select.Gender{
