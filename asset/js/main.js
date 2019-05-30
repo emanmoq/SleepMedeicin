@@ -3,6 +3,8 @@ $(document).ready(function () {
 
     shareItem=false;
     navbartoggler=false;
+    
+
 
     $(".shareItemDisplay").click(function() {
         if(shareItem)
