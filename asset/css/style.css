@@ -99,7 +99,11 @@ float: right;
 .blackNav{
 width:1340px;
     top: 50%;
-  margin: auto;
+  margin: 0 auto;
+
+  position: absolute;
+  z-index: 555;
+  left: 0.4%
     
 }
 .navbar{
@@ -185,14 +189,30 @@ color:white !important;
 }
 .heroSec{
     width:100%;
-    height:640px;
-    padding-top:212px;
-    background-image:url("../img/hero.png");
-    background-repeat: no-repeat;
-background-size:cover;
-position: relative;
 color:white;
 background-position: center; 
+position: relative;
+}
+.heroCarusel{
+    width:100%;
+    position: relative;
+}
+.heroCarusel .owl-dots{
+    position: absolute;
+     bottom:10%;
+     left:45%;
+ }
+.heroCarusel .owl-dots .owl-dot{
+     width: 10px !important;
+     height: 10px !important;
+     border: 1px solid white;
+     background-color: white;
+     border-radius: 50%;
+     margin-left:10px;
+ 
+}
+.heroCarusel .owl-dots .owl-dot.active{
+background-color: transparent;
 }
 .innerheroSec{
     width:100%;
@@ -207,6 +227,10 @@ padding-top:140px
 }
 .heroCont{
     color:black;
+    position: absolute;
+    left:10%;
+    top:20%;
+    z-index: 55;
 
 }
 .heroCont h1{
@@ -231,6 +255,7 @@ padding-top:140px
     position: fixed !important;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 7px 3px;
     transition: .8s all;
+    left:0;
 }
 .scrollNav.bg-dark{
     background: rgb(255, 255, 255) !important; 
@@ -832,7 +857,27 @@ position: relative;
          left: 10%;
          top: 10%;
      }
-
+     .commentTitle{
+         padding:20px 0;
+     }
+     .commentTitle h3{
+         font-weight: bold;
+         color: #3d3d3d;
+         font-family: "Sansation_Regular";
+     }
+     .blog-comments .media-left{
+         padding-right:10px;
+     }
+     .blog-comments .media-left .media-object{
+width:100px;
+height: 90px;
+     }
+     .media-body i{
+         color:#50cb8c;
+     }
+     .media-body .CommentNamr{
+         color:#00bff3;
+     }
      .blogmargin{
         margin-bottom:50px;
     }
@@ -1420,9 +1465,7 @@ display: inline-block}
     font-family: "Sansation_Bold";
     padding:15px 35px !important;
 }
-.owl-dots{
-    display: none !important;
-}
+
 .helpbtn{
     background-color: #00bff3 !important
 }
@@ -1562,14 +1605,17 @@ right:20px;
 bottom:-8%;
 left:40%;
     }
-    .heroSec{
-        height:450px;
-        padding-top:100px;
-    }
+
+
     .heroCont h1{
         font-size:20px;
     }
+    .heroSec{
+        padding-top:50px;
+    }
+
     .heroCont .herologo{
+        width:20px;
         margin-right:2px;
     }
 

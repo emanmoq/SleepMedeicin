@@ -12,6 +12,9 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="asset/css/owl.carousel.css" type="text/css">
+        <link rel="stylesheet" href="asset/css/owl.carousel.min.css" type="text/css">
+
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
                 integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
@@ -194,31 +197,39 @@
         <!--========================== Hero   Section ===========================-->
 
         <div class="heroSec">
-                <div class="container">
-                        <divv class="col-lg-7 col-md-9 col-sm-12">
-                                <div class="heroCont">
+                <div class="heroCarusel owl-carousel" >
+                        <div class="heroCaruselItem">
+                        <img src="asset/img/hero.png">
+                                                <div class="heroCont">
+                
+                                                        <div class="herologo animated wow fadeInDown" data-wow-delay=".6s" style="visibility: visible;-webkit-animation-delay: .6s; -moz-animation-delay: .6s; animation-delay: .6s;">
+                                                                <img src="asset/img/logoo.png" alt="">
+                                                        </div>
+                                                        <h1 class="animated wow fadeInDown" data-wow-delay=".6s" style="visibility: visible;-webkit-animation-delay: .6s; -moz-animation-delay: .6s; animation-delay: .6s;">
+                                                                Welcome to<br>
+                                                                Care Emergency Hospital
+                                                        </h1>
+                                                        <span class="animated wow fadeInDown">We provide cost-effective dental care, including all general dentistry,
+                                                                specialty,
+                                                                and advanced dental services.</span>
+                                                        <div class="herobtn animated wow fadeInUp">
+                                                                <a class="btn btn-primary learnMore" href="#" role="button">lEARN
+                                                                        MORE</a>
+                                                                <a class="btn btn-primary purchase" href="#" role="button">PURCHASE
+                                                                        NOW</a>
+                                                        </div>
+                
+                
+                                                </div>
 
-                                        <div class="herologo">
-                                                <img src="asset/img/logoo.png" alt="">
-                                        </div>
-                                        <h1>
-                                                Welcome to<br>
-                                                Care Emergency Hospital
-                                        </h1>
-                                        <span>We provide cost-effective dental care, including all general dentistry,
-                                                specialty,
-                                                and advanced dental services.</span>
-                                        <div class="herobtn">
-                                                <a class="btn btn-primary learnMore" href="#" role="button">lEARN
-                                                        MORE</a>
-                                                <a class="btn btn-primary purchase" href="#" role="button">PURCHASE
-                                                        NOW</a>
-                                        </div>
-
-
+                        </div>
+                        <div class="heroCaruselItem">
+                                <img src="asset/img/hero.png">
+        
                                 </div>
-                        </divv>
+                              
                 </div>
+              
 
         </div>
         <!--========================== clinic Services  Section ===========================-->
@@ -778,8 +789,9 @@
                                                                 placeholder="Email Address">
                                                         <input class="phoneEmail formControl lastinput " type="number"
                                                                 placeholder="Phone Number">
-                                                        <input class=" phoneEmail formControl appDate " type="date"
-                                                                value="Appointent Date">
+
+                                                        <input class=" phoneEmail formControl appDate " type="text"
+                                                                placeholder="Appointent Date">
                                                         <select class="phoneEmail formControl lastinput Gender">
                                                                 <option selected="select">Gender</option>
                                                                 <option>Male</option>
@@ -1173,11 +1185,14 @@
         <script src="asset/js/jquery3.3.1.js"></script>
         <script src="asset/js/popper.min.js"></script>
         <script src="asset/js/bootstrap.min.js"></script>
+        <script src="asset/js/owl.carousel.min.js"></script>
         <script src="asset/js/owl.carousel.js"></script>
         <script src="asset/js/wow.js"></script>
         <script src="asset/js/html5lightbox.js"></script>
+
         <script src="asset/js/main.js"></script>
         <script src="asset/js/mainindex.js"></script>
+        
 
         <script>
                 var map;
@@ -1190,7 +1205,8 @@
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWZJ97WjmF5OBeftsvQBnGuYoWg8VNh-g&callback=initMap"
                 async defer></script>
-
+            
+          
 
 
 </html>

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   
+    new WOW().init();
 
     shareItem=false;
     navbartoggler=false;
@@ -118,6 +118,17 @@ $(document).ready(function () {
         responsive:{
             0:{
                 items:2
+         
+            }
+        }
+    });
+    $('.heroCarusel').owlCarousel({
+        loop:true,
+dots:true,
+     autoplay:true,
+        responsive:{
+            0:{
+                items:1
          
             }
         }
