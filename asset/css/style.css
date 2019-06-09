@@ -673,8 +673,12 @@ top:100px;
     
     display:block !important;
     position: absolute;
-    bottom: -85px;
-    left: 48%;
+    bottom: 50%;
+    left: -42px;
+   
+}
+.DoctorSlider .owl-nav  .owl-next{
+right:-42px !important;
 }
 .DoctorSlider .owl-stage-outer{
 padding:10px 5px;    
@@ -685,10 +689,10 @@ padding:10px 5px;
     border: 0;
     width:28px;
     height:28px;
-    background-color: #00bff3;
  
-    border-radius: 50%;
     margin-right:5px;
+    background-color: #00bff3 !important;
+    border-radius: 50%;
 
 }
 .DoctorSlider .owl-nav button span{
@@ -698,7 +702,7 @@ padding:10px 5px;
     color:white;
 }
 .DoctorSlider .owl-nav button:hover{
-    background-color: black;
+    background-color: black !important;
 }
 .makeAppoint{
     background-color: #04baeb;
@@ -1066,6 +1070,7 @@ font-size:13px;
             height:auto !important;
           
         }
+
         .GuestSec .owl-nav button{
             background-color:transparent;
             position: absolute !important ;
@@ -1082,6 +1087,10 @@ font-size:13px;
             background-color:black;
             color:white;
             box-shadow:rgba(0,0,0,.3) 0 0 6px 1px;
+        }
+        .GuestSec .owl-nav button i{
+            padding:9px !important;
+
         }
         .GuestSec  .owl-carousel .owl-nav .owl-prev{
             left: -60px !important;
@@ -1454,6 +1463,9 @@ display: inline-block}
     background-color: #00bff3 !important
 }
 @media (max-width: 768px){
+    .DoctorDetails{
+        margin-top:50px;
+    }
 .Appoinment{
     padding: 10px;
 }

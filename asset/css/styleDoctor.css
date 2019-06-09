@@ -1,0 +1,117 @@
+
+.doctors{
+    padding-bottom: 100px;
+}
+.doctorList{
+   background-color: #eee; 
+   padding:20px 15px;
+}
+.doctorList ul{
+    padding:0;
+}
+.doctorList ul li::before{
+content: "";
+border-left:5px solid #00bff3;
+position: absolute;
+left:-15px;
+top:0;
+height:100%;
+display: none}
+.doctorList ul li.active::before{
+    display: block;
+}
+.doctorList ul li.active a{
+    color:#00bff3;
+}
+.doctorList ul li{
+list-style-type:none;
+margin-top:20px;
+position: relative }
+.doctorList ul li a{ 
+text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 14px;
+}
+.doctorList ul li a span{
+    font-weight: 400;
+    color:#8a8787;
+    display: block;
+}
+.doc-Desc span{
+    font-weight: 400;
+    color:#8a8787;
+    display: block;
+}
+.doctorList ul li a:hover{ 
+text-decoration: none;
+color:#00bff3;
+}
+.DoctorDetails h4{
+    color:black;
+    font-weight: 700;
+    margin:0;
+}
+.DoctorDetails span{
+    color:#00bff3;
+}
+.DoctorDetails p{
+    margin-top:20px;
+}
+.doctors .doc-Desc {
+    background-color: #eee;
+    padding:20px;
+    text-align: center;
+}
+.DocrtorImgDesc{
+    width:100%;
+    height:100px;
+}
+.doctors .Doc-Img{
+    width:200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.doctors .Doc-Img img{
+    border-radius:50%;
+    height: 200px;
+}
+.doc-Desc h4{
+    font-size:14px;
+    font-weight: bold;
+
+}
+.DocSpecialist{
+    margin-top:50px;
+}
+.DocSpecialist ul{
+    margin:0;
+    padding:0;
+}
+.DocSpecialist ul li{
+    list-style-type: none;
+    color:#00bff3;
+    font-size: 12px;
+}
+.DoctorBox .DocSpecialist{
+    margin-top:20px;
+}
+.DoctorsStuff{
+    background-color: #eee
+}
+.DoctorBox{
+    text-align: center;
+    background-color: white;
+    padding:20px;
+    box-shadow: 1px 1px 9px 1px rgba(0,0,0,.2)
+}
+.doctorImg{
+    margin: 0 auto;
+    width:200px;
+    margin-bottom:20px;
+}
+.doctorImg img{
+    border-radius: 50%;
+    height:220px;
+
+}
